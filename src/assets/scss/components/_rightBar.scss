@@ -3,6 +3,9 @@
   height: 100%;
   background-color: #57575781;
   backdrop-filter: blur(15px);
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .search-box {
@@ -17,6 +20,7 @@
     border-bottom: 1px solid gray;
     height: 50px;
     margin: 0 40px;
+    width: 75%;
     font-size: 18px;
     color: #fcfcfc;
 
@@ -29,20 +33,29 @@
   &__btn {
     background: url('/src/assets/icons/search.svg') no-repeat center center;
     border: none;
-    width: 90px;
-    height: 90px;
+    width: 25%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.5em;
     cursor: pointer;
     background-color: #fefefe3d;
+    @media (max-width: 1024px) {
+      background-size: 30px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: 60px;
   }
 }
 
 .scroll_box {
   margin: 24px 54px;
-
+  @media (max-width: 1024px) {
+    margin: 16px 30px;
+  }
   ul {
     height: 300px;
     overflow: scroll;
@@ -59,18 +72,24 @@
   }
 }
 
-.divider{
+.divider {
   margin: 24px 54px;
+  @media (max-width: 1024px) {
+    margin: 16px 30px;
+  }
 }
 
-.weather-detail{
+.weather-detail {
   margin: 24px 54px;
-
-  &__list{
+  @media (max-width: 1024px) {
+    margin: 16px 30px;
+  }
+  &__list {
     display: flex;
     flex-direction: column;
   }
-  &__item{
+
+  &__item {
     padding: 14px 0px;
     width: 100%;
     display: flex;
@@ -78,3 +97,44 @@
     color: rgb(223, 223, 223);
   }
 }
+
+.burger-menu {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    background: url('/src/assets/icons/burger.svg') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.display-navbar{
+  display: flex !important;
+  position: absolute;
+  width: 100% !important;
+  flex-direction: column;
+  padding-top: 100px;
+  transition: width 0.5s ease;
+  height: 100%;
+}
+
+.close-icon {
+  display: block;
+  background: url('/src/assets/icons/close.svg') no-repeat center center;
+  background-size: cover;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+}
+

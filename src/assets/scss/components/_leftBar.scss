@@ -6,19 +6,47 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+  }
+
   .header {
     font-size: 20px;
     margin: 24px 0 24px 48px;
+    @media (max-width: 1024px) {
+      justify-self: flex-start;
+    }
+    @media (max-width: 1024px) {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+    }
   }
 
   .title-box {
     margin-left: 48px;
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-left: 0;
+      justify-content: center;
+      text-align: center;
+    }
 
     &__temp {
       font-size: 192px;
       font-weight: 400;
+      @media (max-width: 1024px) {
+        font-size: 100px;
+      }
+      @media (max-width: 768px) {
+        margin-left: 30px;
+      }
     }
 
     &__location {
@@ -33,6 +61,18 @@
       p {
         font-size: 22px;
         font-weight: 400;
+      }
+
+      @media (max-width: 1024px) {
+        h3 {
+          font-size: 48px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 768px) {
+        text-align: center;
       }
     }
 
@@ -52,8 +92,18 @@
         font-size: 22px;
         font-weight: 500;
       }
+
+      @media (max-width: 1024px) {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+
     }
   }
 }
 
-@media only screen and (max-width: 1440px) {}
