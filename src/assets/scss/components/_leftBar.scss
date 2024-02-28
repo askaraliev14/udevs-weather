@@ -1,0 +1,59 @@
+.left-container {
+  width: 70%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .header {
+    font-size: 20px;
+    margin: 24px 0 24px 48px;
+  }
+
+  .title-box {
+    margin-left: 48px;
+    display: flex;
+    align-items: center;
+
+    &__temp {
+      font-size: 192px;
+      font-weight: 400;
+    }
+
+    &__location {
+      margin-left: 30px;
+
+      h3 {
+        font-size: 88px;
+        font-weight: 400;
+        line-height: 80px;
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 400;
+      }
+    }
+
+    &__weather {
+      margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {}

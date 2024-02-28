@@ -1,0 +1,15 @@
+export const locations = [
+    {"id": "1", "name": "Karakalpakstan", "value": "karakalpakstan"},
+    {"id": "2", "name": "Andijan", "value": "andijan"},
+    {"id": "3", "name": "Bukhara", "value": "bukhara"},
+    {"id": "4", "name": "Jizzakh", "value": "jizzakh"},
+    {"id": "5", "name": "Qashqadaryo", "value": "qashqadaryo"},
+    {"id": "6", "name": "Navoiy", "value": "navoiy"},
+    {"id": "7", "name": "Namangan", "value": "namangan"},
+    {"id": "8", "name": "Samarkand", "value": "samarkand"},
+    {"id": "9", "name": "Surxondaryo", "value": "termez"},
+    {"id": "10", "name": "Sirdaryo", "value": "sirdaryo"},
+    {"id": "11", "name": "Tashkent", "value": "tashkent"},
+    {"id": "12", "name": "Fergana", "value": "fergana"},
+    {"id": "13", "name": "Khorezm", "value": "Xiva"},
+]
