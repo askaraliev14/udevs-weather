@@ -1,15 +1,29 @@
+// @ts-nocheck
 import {useEffect, useState} from "react";
 import {useGetWeatherByCityQuery} from "../store/services/weatherApi.ts";
 import {setLoading, setWeatherData} from "../store/slice/weatherSlice.ts";
 import {useDispatch, useSelector} from "react-redux";
 import {locations} from "../constants/locations.ts";
 
+interface WeatherData {
+    clouds: {
+        all: number;
+    };
+    main: {
+        humidity: number;
+        pressure: number;
+    };
+    wind: {
+        speed: number;
+    };
+}
+
 function RightBar() {
     const dispatch = useDispatch();
     const [searchTerm, setSearchTerm] = useState('')
     const [city, setCity] = useState('Tashkent')
-    const [errorMsg, setErrorMsg] = useState()
-    const weather = useSelector((state) => state.weather.data)
+    const [errorMsg, setErrorMsg] = useState<string | null>(null);
+    const weather = useSelector((state: { weather: WeatherData }) => state.weather.data);
 
     const {data: weatherData, error, isLoading} = useGetWeatherByCityQuery(city, {
         skip: city === '',

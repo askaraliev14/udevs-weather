@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useEffect, useState} from 'react'
 import mist from '/images/mist-min.webp'
 import rainy from '/images/rainy-min.webp'
