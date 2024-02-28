@@ -19,11 +19,14 @@
     margin: 24px 0 24px 48px;
     @media (max-width: 1024px) {
       justify-self: flex-start;
-    }
-    @media (max-width: 1024px) {
       position: absolute;
       top: 20px;
       left: 10px;
+    }
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 20px;
+      left: 5px;
     }
   }
 
